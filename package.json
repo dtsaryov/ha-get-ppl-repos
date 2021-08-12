@@ -1,0 +1,28 @@
+{
+  "name": "ha-get-ppl-repos",
+  "version": "0.0.1",
+  "description": "The app enables to clone all student repositories for the specified course",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtsaryov/ha-get-ppl-repos.git"
+  },
+  "keywords": [
+    "github",
+    "git",
+    "nodejs",
+    "node",
+    "javascript",
+    "js",
+    "octokit"
+  ],
+  "author": "dtsaryov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dtsaryov/ha-get-ppl-repos/issues"
+  },
+  "homepage": "https://github.com/dtsaryov/ha-get-ppl-repos#readme"
+}
