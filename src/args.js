@@ -1,13 +1,13 @@
 const fs = require('fs')
 const Course = require('./course.js');
 
-const COURSE_REGEXP = new RegExp(`(${Object.values(Course).join('|')})-\\d+`);
+const createIntensiveRegexp = () => new RegExp(`(${Object.values(Course).join('|')})-(\\d+)`, 'g');
 
 const parseArgs = (args = []) => {
   // noinspection JSUnusedLocalSymbols
-  const [_, __, intensive, targetDir] = args;
+  const [_, __, intensiveDescriptor, targetDir] = args;
 
-  if (!COURSE_REGEXP.test(intensive)) {
+  if (!createIntensiveRegexp().test(intensiveDescriptor)) {
     console.error('Wrong intensive descriptor');
     return {};
   }
@@ -17,7 +17,11 @@ const parseArgs = (args = []) => {
     return {};
   }
 
-  return {intensive, targetDir}
+  const [course, intensiveNumber] = [...intensiveDescriptor.matchAll(createIntensiveRegexp())][0].slice(1);
+  return {
+    intensive: {course, intensiveNumber},
+    targetDir
+  }
 };
 
 module.exports = {parseArgs};

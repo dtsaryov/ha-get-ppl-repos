@@ -15,7 +15,10 @@ describe('args', () => {
 
   it('should accept valid args', () => {
     expect(parseArgs([null, null, 'ecmascript-15', '/'])).toEqual({
-      intensive: 'ecmascript-15',
+      intensive: {
+        course: 'ecmascript',
+        intensiveNumber: '15'
+      },
       targetDir: '/'
     })
   });
