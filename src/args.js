@@ -3,7 +3,7 @@ const Course = require('./course.js');
 
 const COURSE_REGEXP = new RegExp(`(${Object.values(Course).join('|')})-\\d+`);
 
-const parseInput = (args = []) => {
+const parseArgs = (args = []) => {
   // noinspection JSUnusedLocalSymbols
   const [_, __, intensive, targetDir] = args;
 
@@ -20,4 +20,4 @@ const parseInput = (args = []) => {
   return {intensive, targetDir}
 };
 
-module.exports = {parseInput};
+module.exports = {parseArgs};
