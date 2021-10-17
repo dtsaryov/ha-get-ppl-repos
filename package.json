@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/dtsaryov/ha-get-ppl-repos#readme",
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "rewire": "^5.0.0"
   },
   "dependencies": {
     "@octokit/rest": "^18.9.0",

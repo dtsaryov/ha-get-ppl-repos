@@ -1,7 +1,7 @@
 const simpleGit = require('simple-git');
 
 const getRepoTargetDir = (repo, targetDir) => {
-  const studentName = repo.description.replaceAll(' ', '.');
+  const studentName = repo.description.replace(/\s+/g, '.');
   return `${targetDir}/${studentName}/${repo.name}`;
 };
 
